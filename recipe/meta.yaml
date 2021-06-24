@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-grpc" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
-  sha256: 47c3206461aaaef0e414cdc89173fa93ef89d7d30162d481b7fbfb326922da29
+  sha256: 319c7e74b15376d8d90eb3edfd0f9ee134274ffdcc8e23806f7431d67ac38808
 
 build:
   number: 0
@@ -17,16 +17,16 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.6
+    - pip
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - python >=3.6
+    - apache-airflow >=2.1.0
     - google-auth >=1.0.0,<2.0.0dev
     - google-auth-httplib2 >=0.0.1
     - grpcio >=1.15.0
-    - python >=3.6
 
 test:
   imports:
