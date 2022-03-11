@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-grpc" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
-  sha256: faba22dd234c8917452a8703c18be8a7aada9f3cec6c715bef3efaa2eaefdaa6
+  sha256: 038825b20dda10bc3a9af9c13739861338fe65c7ef313dd9a4314cc301b9df4c
 
 build:
   number: 0
