@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-grpc" %}
-{% set version = "3.3.0" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-grpc-{{ version }}.tar.gz
-  sha256: 04cf2799621e4c533cfb8c3dbfa583756bb8fad546c9ee0258543fcd16e1986a
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 0636d9c00940d1684d340cafadb65302132acb8ade62550bac400ec28d77701c
 
 build:
   noarch: python
