@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-grpc" %}
-{% set version = "3.6.0" %}
+{% set version = "3.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_grpc-{{ version }}.tar.gz
-  sha256: f9709e228b39c47c4aa2dfee332f761358682ca1eb23e0492a732c8f4357221d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_grpc-{{ version }}.tar.gz
+  sha256: 2bbc2d08212bd2a6099b7f0348bfc57cf73a850dadb6c5313c225af44f45b7a6
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.8.0
+    - apache-airflow >=2.9.0
     - google-auth-httplib2 >=0.0.1
     - google-auth >=1.0.0,<3.0.0
     - grpcio >=1.59.0
