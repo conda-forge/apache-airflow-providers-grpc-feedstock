@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-grpc" %}
-{% set version = "3.7.0" %}
+{% set version = "3.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_grpc-{{ version }}.tar.gz
-  sha256: 2bbc2d08212bd2a6099b7f0348bfc57cf73a850dadb6c5313c225af44f45b7a6
+  sha256: 7b785c23e23c3bf7519a9498d00a6d4e341edd89c29be6208366a76fdecaa843
 
 build:
   noarch: python
@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.0
+    - flit-core ==3.10.1
     - pip
   run:
     - python >={{ python_min }},<4.dev0
     - apache-airflow >=2.9.0
-    - google-auth-httplib2 >=0.0.1
     - google-auth >=1.0.0,<3.0.0
+    - google-auth-httplib2 >=0.0.1
     - grpcio >=1.59.0
 
 test:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-grpc for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/grpc/LICENSE
+  license_file: src/airflow/providers/grpc/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-grpc/stable/index.html
   dev_url: https://github.com/apache/airflow/
