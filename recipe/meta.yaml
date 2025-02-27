@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.0
+    - flit-core ==3.10.1
     - pip
   run:
     - python >={{ python_min }},<4.dev0
     - apache-airflow >=2.9.0
-    - google-auth-httplib2 >=0.0.1
     - google-auth >=1.0.0,<3.0.0
+    - google-auth-httplib2 >=0.0.1
     - grpcio >=1.59.0
 
 test:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-grpc for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/grpc/LICENSE
+  license_file: src/airflow/providers/grpc/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-grpc/stable/index.html
   dev_url: https://github.com/apache/airflow/
