@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-grpc" %}
-{% set version = "3.8.2" %}
+{% set version = "3.8.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_grpc-{{ version }}.tar.gz
-  sha256: 4b97b91c8023cbc8735514268a0a66bad56bbc20fb905441bfb6ba8c19e2a3af
+  sha256: 461f96d3fe00182fffdbc3f04ad3a69c2107e8f8566a4d5161d5d4f609d869cb
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - apache-airflow-providers-common-compat >=1.8.0
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - google-auth >=1.0.0,<3.0.0
