@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-grpc
-  version: "3.9.3"
+  version: "3.9.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_grpc-${{ version }}.tar.gz
-  sha256: 417315f126d1c16b0708637be15c0072e04924aff536fada299c8c2abb6c68a3
+  sha256: 949ee62596a8a6978d25d26cf23b93d7cd4ddd1cb5016aea8454a2553ad6e9fc
 
 build:
   noarch: python
@@ -33,7 +33,9 @@ tests:
       imports:
         - airflow.providers.grpc
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
