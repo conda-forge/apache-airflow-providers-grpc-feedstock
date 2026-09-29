@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-grpc
-  version: "3.9.5"
+  version: "3.10.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_grpc-${{ version }}.tar.gz
-  sha256: e3ef57cd9e6b2f220522adb276f8bc59e9fd24274d2377dbd6f348121dae2405
+  sha256: 7f241381afbbfee264daf1cc3c6ccf336fd5c758105a05ef1317a0ff4af167e3
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
